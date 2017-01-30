@@ -1,22 +1,11 @@
 "use strict";
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _user = require("./user");
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _user2 = _interopRequireDefault(_user);
 
-var Main = function () {
-  function Main(appName) {
-    _classCallCheck(this, Main);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    this.appName = appName;
-  }
-
-  _createClass(Main, [{
-    key: "introduce",
-    value: function introduce() {
-      alert("\n      Hello,\n      My name is " + this.appName + "\n    ");
-    }
-  }]);
-
-  return Main;
-}();
+var user = _user2.default.register("tiennguyen@gmail.com");
+console.log(user.email);
+console.log(_user2.default.all.length);

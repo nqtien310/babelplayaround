@@ -1,12 +1,5 @@
-class Main {
-  constructor(appName){
-    this.appName = appName;
-  }
+import User from './user'
 
-  introduce() {
-    alert(`
-      Hello,
-      My name is ${this.appName}
-    `);
-  }
-}
+let user = User.register("tiennguyen@gmail.com");
+console.log(user.email);
+console.log(User.all.length);
